@@ -11,51 +11,39 @@
 
 <header>
   <h1>DROP NEST</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
-<section class="hero">
-  <h2>Trending Products, Best Prices 🔥</h2>
-  <p>Shop smart. Live better.</p>
-</section>
-
-<section id="products" class="products">
+<section class="products">
 
   <div class="card">
-    <img src="https://via.placeholder.com/200">
+    <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._SL1500_.jpg">
     <h3>Wireless Earbuds</h3>
     <p>₹999</p>
-    <button onclick="orderNow('Wireless Earbuds')">Buy Now</button>
+    <button onclick="openForm('Wireless Earbuds')">Order Now</button>
   </div>
 
   <div class="card">
-    <img src="https://via.placeholder.com/200">
+    <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._SL1500_.jpg">
     <h3>Smart Watch</h3>
     <p>₹1499</p>
-    <button onclick="orderNow('Smart Watch')">Buy Now</button>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/200">
-    <h3>Portable Blender</h3>
-    <p>₹1299</p>
-    <button onclick="orderNow('Portable Blender')">Buy Now</button>
+    <button onclick="openForm('Smart Watch')">Order Now</button>
   </div>
 
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>WhatsApp: +91XXXXXXXXXX</p>
-</section>
+<!-- ORDER FORM -->
+<div id="orderForm" class="form-popup">
+  <div class="form-box">
+    <h2>Place Order</h2>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="address" placeholder="Your Address" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <input type="hidden" id="product">
 
-<footer>
-  <p>© 2026 DROP NEST</p>
-</footer>
+    <button onclick="submitOrder()">Confirm Order</button>
+    <button onclick="closeForm()">Cancel</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
