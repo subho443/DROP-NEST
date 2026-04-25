@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Track Order</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+  <h1>Track Your Order 📦</h1>
+
+  <input type="text" id="phone" placeholder="Enter your phone number">
+  <br><br>
+
+  <button onclick="trackOrder()">Track</button>
+
+  <p id="result"></p>
+
+<script>
+function trackOrder() {
+  let phone = document.getElementById("phone").value;
+
+  if(phone === "6291387141") {
+    document.getElementById("result").innerHTML = "✅ Order Status: Shipped 🚚";
+  } else {
+    document.getElementById("result").innerHTML = "❌ Order not found. Contact support.";
+  }
+}
+</script>
+
+</body>
+</html>
